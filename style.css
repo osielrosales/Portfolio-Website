@@ -1,19 +1,18 @@
 :root {
-  --bg: #0f0f1a; /* Background color */
-  --sidebar: #1a1a2e; /* Sidebar color */
-  --card: #111827; /* Backhround color for boxes (projects) */
+  --bg: #CFCFCF; /* Background color */
+  --sidebar: #7D7d7d; /* Sidebar color */
+  --card: #7D7d7d; /* Backhround color for boxes (projects) */
 
 
-  --text: #e5e7eb; /* Text color */
-  --muted: #a1a1aa; /* Secondary text color */
+  --text: #000000; /* Text color */
+  --boxText: #ffffff; /* Secondary text color */
 
 
-  --primary: #8b5cf6; /* Action color for buttons */
-  --primary-dark: #7c3aed; /* Hovering color for buttons */
+  --primary: #acc0d3; /* Primary action color (links) */
+  --primary-dark: #ffffff; /* Hover state for primary actions */
 
 
-  --accent: #06b6d4; /* Nav highlight color */
-
+  --accent: #b0acac; /* Nav highlight color */
 
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -43,7 +42,6 @@ a:hover {
    opacity: 0.8;
 }
 
-
 /* MAIN LAYOUT */
 .container {
    display: flex;
@@ -54,7 +52,7 @@ a:hover {
 .sidebar {
    width: 280px;
    background-color: var(--sidebar);
-   color: var(--text);
+   color: var(--boxText);
    display: flex;
    flex-direction: column;
    padding: 20px;
@@ -119,7 +117,7 @@ footer {
 }
 
 .social-icons a {
-   color: var(--text);
+   color: var(--boxText);
 }
 
 /* MAIN CONTENT AREA */
@@ -145,12 +143,12 @@ footer {
 
 .content h3 {
    margin-bottom: 10px;
-   color: var(--muted);
+   color: var(--text);
 }
 
 .content p {
    margin-bottom: 15px;
-   color: var(--muted);
+   color: var(--text);
 }
 
 /* PROJECT CARDS */
@@ -169,15 +167,31 @@ footer {
 
 .project h2 {
    margin-bottom: 10px;
+   color: var(--boxText);
 }
 
 .project p {
    margin-bottom: 10px;
+   color: var(--boxText);
 }
 
 .project a {
    color: var(--primary);
    font-weight: bold;
+}
+
+.project-content {
+   display: flex;
+   gap: 20px;
+   align-items: flex-start;
+}
+
+.project-media {
+   flex: 1;
+}
+
+.project-text {
+   flex: 1;
 }
 
 /* CONTACT FORM */
@@ -253,5 +267,24 @@ button:hover {
    }
 }
 
+@media (max-width: 768px) {
+   .container {
+       flex-direction: column;
+   }
 
+   .sidebar {
+       width: 100%;
+       text-align: center;
+   }
+
+   .nav-links nav {
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+
+   .project-content {
+       flex-direction: column;
+   }
+}
 
