@@ -86,7 +86,7 @@ a:hover {
    border-radius: 50%;
    object-fit: cover;
    margin-bottom: 10px;
-   border: 2px solid var(--text);
+   border: 2px solid var(--primary-dark);
 }
 
 .profile-name h1 {
