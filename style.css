@@ -190,6 +190,13 @@ footer {
    flex: 1;
 }
 
+.project-media iframe {
+   width: 100%;
+   aspect-ratio: 16 / 9;
+   border: none;
+   border-radius: 12px;
+}
+
 .project-text {
    flex: 1;
 }
@@ -249,24 +256,7 @@ button:hover {
     }
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-   .container {
-       flex-direction: column;
-   }
-
-   .sidebar {
-       width: 100%;
-       text-align: center;
-   }
-
-   .nav-links nav {
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: center;
-   }
-}
-
+/* RESPONSIVE DESIGN (mobile) */
 @media (max-width: 768px) {
    .container {
        flex-direction: column;
@@ -285,6 +275,11 @@ button:hover {
 
    .project-content {
        flex-direction: column;
+   }
+
+   .project-media,
+   .project-text {
+       width: 100%;
    }
 }
 
